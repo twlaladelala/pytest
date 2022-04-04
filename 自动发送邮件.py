@@ -46,6 +46,6 @@ email.attach(create_attachment('table', '某年级某班成绩表.xls'))
 smtp_obj = smtplib.SMTP_SSL('smtp.163.com')
 # smtp_obj.connect('smtp.163.com',456)
 # 登录邮箱账号 授权码
-smtp_obj.login('18318055277@163.com', 'QPQLUTSTOUBAGKGR')
+smtp_obj.login('18318055277@163.com', '邮箱授权码')
 # 发送邮件
 smtp_obj.sendmail('18318055277@163.com', ['1456315032@qq.com'], email.as_string())
