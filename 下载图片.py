@@ -5,8 +5,10 @@ import requests
 import shutil
 from myutils import download_picture
 from myutils import send_email
+from 运行时间方法函数 import timemaster
 
 
+@timemaster
 def main():
     if not os.path.exists('images/since'):
         os.mkdir('images/since')
@@ -21,7 +23,7 @@ def main():
     shutil.make_archive('images/car', 'zip', 'images/since')  # 压缩 images/since下的所有文件
     send_email(
         form_user='18318055277@163.com',
-        to_user='ha1586795195@qq.com',
+        to_user='1456315032@qq.com',
         subject='资源分享',
         content='附件中有下载的内容，请注意查收！',
         filenames=['images/car.zip']

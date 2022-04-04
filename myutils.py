@@ -7,13 +7,14 @@ from urllib.parse import quote
 
 Host = 'smtp.163.com'
 USER = '18318055277@163.com'
-PASS = '邮件授权码'
+PASS = '邮箱授权码'
 
 
 # 下载文件
 def download_picture(path, url):
     filename = url[url.rfind('/') + 1:]
     resp = requests.get(url)
+
     with  open(f'{path}{filename}', 'wb') as file:
         file.write(resp.content)
 
@@ -22,7 +23,7 @@ def send_email(form_user, to_user, subject='', content='', filenames=[]):
     # 发送邮件
     email = MIMEMultipart()
     email['From'] = form_user
-    email['To'] = ';'.join(to_user)
+    email['To'] = to_user
     email['Subject'] = subject
 
     message = MIMEText(content, 'plain', 'utf-8')
