@@ -36,3 +36,5 @@ ws.add_chart(chart1, 'A10')
 
 
 wb.save('table/销售统计图demo.xlsx')
+
+
