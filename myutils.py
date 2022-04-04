@@ -7,7 +7,7 @@ from urllib.parse import quote
 
 Host = 'smtp.163.com'
 USER = '18318055277@163.com'
-PASS = ''
+PASS = '邮件授权码'
 
 
 # 下载文件
@@ -33,7 +33,7 @@ def send_email(form_user, to_user, subject='', content='', filenames=[]):
             display_filename = filename[pos + 1:] if pos >= 0 else filename
             display_filename = quote(display_filename)
             attachment = MIMEText(file.read(), 'base64', 'utf-8')
-            attachment['contemt=type'] = 'application/octet-stream'
+            attachment['content-type'] = 'application/octet-stream'
             attachment['content-disposition'] = f'attachment; filename ="{display_filename}"'
             email.attach(attachment)
 
