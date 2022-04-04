@@ -6,6 +6,7 @@ from email.mime.text import MIMEText
 email = MIMEMultipart()
 email["Subject"] = Header("离职证明文件，请查收", 'utf-8')  # 标题
 email["From"] = Header("深圳某某某科技有限公司")  # 发件人
+email['cc'] = Header('')  # 邮件抄送人
 email["To"] = Header("1456315032@qq.com", 'utf-8')  # 收件人
 # 正文内容
 content = (""" 乌克兰战争的局势最近迎来了重大变化。3月29日，俄罗斯国防部副部长亚历山大•福明表示，'
