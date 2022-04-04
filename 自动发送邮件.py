@@ -6,7 +6,7 @@ from email.mime.text import MIMEText
 email = MIMEMultipart()
 email["Subject"] = Header("你需要的离职证明已经开出", 'utf-8')  # 标题
 email["From"] = Header("深圳某某某科技有限公司", 'utf-8')  # 发件人
-email["To"] = Header("田伟", 'utf-8')  # 收件人
+email["To"] = Header("拉拉的啦啦", 'utf-8')  # 收件人
 content = (  # 正文内容
    """ '乌克兰战争的局势最近迎来了重大变化。3月29日，俄罗斯国防部副部长亚历山大•福明表示，'
     '俄罗斯国防部决定从根本上减少基辅和切尔尼戈夫方向的作战行动。随后几天，基辅附近俄军部队开始有组织地向俄罗斯和白俄罗斯境内进行撤退：3月31日，'
