@@ -18,3 +18,6 @@ print(type(dict1))
 
 print((max(dict1)))
 print((min(dict1)))
+
+
+print(max(zip(stocks.values(),stocks.keys())))
