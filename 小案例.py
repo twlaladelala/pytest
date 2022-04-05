@@ -32,19 +32,20 @@ class Salesman(Employer):
 
 def main():
     emps = [
-        Manager(1122,'田伟'),
-        Programmer(1133,'田伟1'),
+        Manager(1122, '田伟'),
+        Programmer(1133, '田伟1'),
         Programmer(1144, '田伟2'),
         Salesman(1155, '田伟3'),
         Salesman(1166, '田伟4'),
         Programmer(1177, '田伟5'),
-        Salesman(1188,'田伟6')
+        Salesman(1188, '田伟6')
     ]
     for emp in emps:
         if type(emp) == Programmer:
             emp.working_hour = int(input(f'请输入{emp.name}的工作时长：'))
 
         print(f'{emp.name}本月工资：{emp.get_salary()}元')
+
 
 if __name__ == '__main__':
     main()
